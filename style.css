@@ -15,7 +15,7 @@ body {
 /* وهنا تنسيق الشريط العلوي لحد يغيره عشان يتوحد في كل الصفحات */
 .site-header {
     background: #f8f4ef;
-    padding: 12px 30px;
+    padding: 8px 30px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
