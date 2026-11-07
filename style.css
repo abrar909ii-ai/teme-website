@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-
+/*بنات هنا تنسيق لون الصفحات كلها */
 body {
     margin: 0;
     font-family: Tahoma, Arial, sans-serif;
@@ -12,7 +12,7 @@ body {
     flex-direction: column;
 }
 
-/* ===== الشريط العلوي ===== */
+/* وهنا تنسيق الشريط العلوي لحد يغيره عشان يتوحد في كل الصفحات */
 .site-header {
     background: #f8f4ef;
     padding: 12px 30px;
@@ -142,4 +142,3 @@ main h1 {
     gap: 16px;
 }
 
-/* ===== النماذج =====
