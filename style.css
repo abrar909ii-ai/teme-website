@@ -156,7 +156,9 @@ main h1 {
 }
 
 /* ===== About page ===== */
-
+.about-page {
+  background: #f5ebd7;                 /* بيج */
+}
 .about-page main {
   direction: ltr;
   text-align: left;
