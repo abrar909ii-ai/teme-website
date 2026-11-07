@@ -15,7 +15,7 @@ body {
 /* وهنا تنسيق الشريط العلوي لحد يغيره عشان يتوحد في كل الصفحات */
 .site-header {
     background: #f8f4ef;
-     padding: 6px 25px;
+     padding: 4px 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
@@ -37,8 +37,8 @@ body {
 }
 
 .logo-img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
 }
 
