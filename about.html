@@ -6,10 +6,9 @@
     <title>About -  من نحن</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
+<body class="about-page">
     <header>
-        <div class="logo">مشروع الفريق</div>
+        <div class="logo">Team Project</div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,19 +21,94 @@
         </nav>
     </header>
 
-    <main>
-        <h1>من نحن</h1>
-        <div class="card">
-            <p>نحن فريق من الطلاب نعمل على مشروع تصميم مواقع الويب.</p>
+ <main dir="ltr">
+    <h1>About Us</h1>
+
+    <img src="about-pet.jpg" alt="A happy pet waiting for adoption" class="about-img">
+
+    <p class="intro">
+        We help every animal waiting for a home find a family of its own.
+    </p>
+
+    <div class="card">
+        <h2>Our Story</h2>
+        <p>
+            The idea began when we noticed that many animals are waiting for a
+            home to take them in, while many people buy a pet without being ready
+            for the responsibility. So we created this website to be a bridge
+            between the two.
+        </p>
+        <div id="more-story" class="hidden">
+            <p>
+                Here you can meet the animals available for adoption, read care
+                tips, test your readiness before making the decision, and then
+                contact us to complete the adoption.
+            </p>
+            <p>
+                Our goal is for every adoption to be a thoughtful decision that
+                ends with a happy home for both the animal and its owner.
+            </p>
         </div>
-        <div class="card">
-            <h3>أعضاء الفريق</h3>
-            <p>اكتب هنا أسماء أعضاء الفريق.</p>
-        </div>
-    </main>
+        <button id="toggle-story" type="button">Read more</button>
+    </div>
+
+    <div class="card">
+        <h2>Our Vision, Mission and Goals</h2>
+        <ul>
+            <li><strong>Our vision:</strong> A community that adopts animals instead of buying them, where no animal is left without a home.</li>
+            <li><strong>Our mission:</strong> To make the adoption journey easier and to raise awareness about caring for animals.</li>
+            <li><strong>First goal:</strong> To connect waiting animals with suitable families.</li>
+            <li><strong>Second goal:</strong> To provide reliable information about caring for cats, dogs, and other pets.</li>
+            <li><strong>Third goal:</strong> To help everyone know how ready they are before adopting.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Adoption Steps</h2>
+        <ol>
+            <li>Test your readiness with our <a href="quiz.html">Quiz</a>.</li>
+            <li>Browse the <a href="animals.html">available animals</a> and choose the one that suits you.</li>
+            <li>Press the "Adopt Me" button on the animal you liked.</li>
+            <li><a href="contact.html">Contact us</a> to confirm your request.</li>
+            <li>Take your pet home and start your life together.</li>
+        </ol>
+    </div>
+
+    <div class="card">
+        <h2>Meet the Team</h2>
+        <ul class="team-list">
+            <li>Horya</li>
+            <li>Mai</li>
+            <li>Areeb</li>
+            <li>Ahad</li>
+            <li>Danah</li>
+            <li>Abrar</li>
+        </ul>
+    </div>
+</main>
 
     <footer>
-        <p>&copy; 2026 جميع الحقوق محفوظة</p>
+        <p>&copy; 2026 All rights reserved</p>
+    </footer>
+
+<script>
+    var btn = document.getElementById("toggle-story");
+    var more = document.getElementById("more-story");
+
+    btn.addEventListener("click", function () {
+        if (more.classList.contains("hidden")) {
+            more.classList.remove("hidden");
+            btn.textContent = "Show less";
+        } else {
+            more.classList.add("hidden");
+            btn.textContent = "Read more";
+        }
+    });
+</script>
+
+</body>
+</html>
+
     </footer>
 
 </body>
