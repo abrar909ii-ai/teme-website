@@ -39,8 +39,8 @@ body {
 }
 
 .logo-img {
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     object-fit: cover;
     transform: scale(1.6);
 }
