@@ -15,13 +15,15 @@ body {
 /* وهنا تنسيق الشريط العلوي لحد يغيره عشان يتوحد في كل الصفحات */
 .site-header {
     background: #f8f4ef;
-     padding: 4px 15px;
+    padding: 0 25px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .header-inner {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -70,6 +72,7 @@ body {
     text-decoration: none;
     color: #222;
     font-size: 15px;
+     margin: 0;
     padding-bottom: 6px;
     position: relative;
 }
