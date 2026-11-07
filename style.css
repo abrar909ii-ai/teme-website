@@ -345,3 +345,47 @@ main h1 {
     padding: 16px;
     color: #3b2a20;
 }
+/*ذا خاص في هوم */
+.hero {
+    direction: ltr;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 400px;
+    padding: 40px 60px;
+}
+
+.hero-text {
+    max-width: 480px;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin: 0 0 15px;
+    color: #1f3b3a;
+}
+
+.hero-text p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #444;
+    margin: 0 0 25px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #e8896b;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #d6745a;
+}
+/*االى هنا*/
