@@ -1,15 +1,15 @@
 * {
     box-sizing: border-box;
 }
-.home-page {
-    background-color: #f6f2ea;
-    background-image:
-        linear-gradient(to bottom, rgba(246, 242, 234, 0) 0%, #f6f2ea 500px),
-        url("");
-    background-size: 100% 600px, 100% 600px;
-    background-position: top, top;
-    background-repeat: no-repeat, no-repeat;
+
+   .home-page {
+    background-image: url("home-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
 /*بنات هنا تنسيق لون الصفحات كلها */
 body {
     margin: 0;
