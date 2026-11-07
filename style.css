@@ -13,58 +13,108 @@ body {
 }
 
 /* ===== الشريط العلوي ===== */
-header {
-    background: transparent;
-    padding: 0;
-    border: none;
+.site-header {
+    background: #f8f4ef;
+    padding: 12px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.topbar {
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 3px 24px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #1f3b3a;
 }
 
 .logo-img {
-    height: 180px;
-    width: auto;
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.brand-text {
     display: flex;
-    flex-direction: row;
-    gap: 6px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    line-height: 1.2;
 }
 
-nav li {
-    display: block;
-}
-
-nav a {
-    display: block;
-    background: transparent;
-    color: #000;
-    text-decoration: none;
-    padding: 8px 12px;
-    font-size: 15px;
+.brand-name {
+    font-size: 22px;
     font-weight: bold;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.brand-tag {
+    font-size: 12px;
+    color: #555;
 }
 
-nav a.active {
-    border-bottom: 3px solid #000;
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-size: 15px;
+    padding-bottom: 6px;
+    position: relative;
+}
+
+/* الخط البرتقالي تحت الصفحة الحالية */
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: 3px;
+    background: #e8896b;
+}
+
+.nav-links a:hover {
+    color: #e8896b;
+}
+
+.header-btn {
+    background: #e8896b;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.header-btn:hover {
+    background: #d6745a;
+}
+
+/* للجوال */
+@media (max-width: 800px) {
+    .header-inner {
+        flex-direction: column;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
 /* ===== المحتوى ===== */
 main {
     flex: 1;
