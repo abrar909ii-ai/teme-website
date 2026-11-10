@@ -346,27 +346,36 @@ main h1 {
     background-position: center;
     background-repeat: no-repeat;
 
-    min-height: 100vh;
-    min-height: 100svh;
+   width: 100%;
+    min-height: 600px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;   /* في الصفحات العربية (rtl) هذا يحط الكلام على اليسار */
+    justify-content: flex-end;   
     padding: 40px 6%;
 }
 
 .hero-text {
     max-width: 560px;
-    text-align: left;            /* يخلي الكلام محاذي لليسار */
+    text-align: left;           
 }
 
 .hero-text h1 {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-size: clamp(2.4rem, 7vw, 5rem);
     line-height: 1.1;
     color: #2B1B14;
     margin-bottom: 16px;
     direction: ltr;
-    text-align: left;            /* كانت right */
+    text-align: left;  
+    
+}
+.smal{
+   color:#B77965;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.1;
+    text-align: left; 
 }
 /*االى هنا*/
