@@ -341,54 +341,62 @@ main h1 {
 }
 /*ذا خاص في هوم */
 .hero {
-    direction: ltr;
+   
+    background-image: url("A-imag4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    min-height: 400px;
-    padding: 40px 60px;
+    padding: 40px 6%;
 }
 
 .hero-text {
-    max-width: 480px;
-    text-align: left;
+    max-width: 560px;
 }
 
 .hero-text h1 {
-    font-size: 52px;
-    line-height: 1.2;
-    margin: 0 0 15px;
-    color: #1f3b3a;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.4rem, 7vw, 5rem);
+    line-height: 1.1;
+    color: #2B1B14;
+    margin-bottom: 16px;
+    direction: ltr;
+    text-align: right;
 }
 
 .hero-text p {
-    font-size: 17px;
-    line-height: 1.7;
-    color: #444;
-    margin: 0 0 25px;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    line-height: 1.8;
+    color: #5A463C;
+    margin-bottom: 28px;
 }
 
 .hero-btn {
     display: inline-block;
-    background: #e8896b;
-    color: #fff;
+    padding: 12px 34px;
+    background: #E9876A;
+    color: #2B1B14;
+    font-weight: 700;
+    font-size: 1.1rem;
     text-decoration: none;
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-size: 16px;
-    transition: 0.3s;
+    border-radius: 50px;
+    transition: transform .2s, background .2s;
 }
 
 .hero-btn:hover {
-    background: #d6745a;
+    background: #D4704F;
+    transform: translateY(-2px);
 }
 
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-top: 10px;
+@media (max-width: 600px) {
+    .hero {
+        background-position: center top; /* عدّلها حسب الجزء المهم في صورتك */
+    }
 }
 
 /*االى هنا*/
