@@ -341,7 +341,6 @@ main h1 {
 }
 /*ذا خاص في هوم */
 .hero {
-   
     background-image: url("A-imag4.png");
     background-size: cover;
     background-position: center;
@@ -351,11 +350,13 @@ main h1 {
     min-height: 100svh;
     display: flex;
     align-items: center;
+    justify-content: flex-end;   /* في الصفحات العربية (rtl) هذا يحط الكلام على اليسار */
     padding: 40px 6%;
 }
 
 .hero-text {
     max-width: 560px;
+    text-align: left;            /* يخلي الكلام محاذي لليسار */
 }
 
 .hero-text h1 {
@@ -366,37 +367,6 @@ main h1 {
     color: #2B1B14;
     margin-bottom: 16px;
     direction: ltr;
-    text-align: right;
+    text-align: left;            /* كانت right */
 }
-
-.hero-text p {
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
-    line-height: 1.8;
-    color: #5A463C;
-    margin-bottom: 28px;
-}
-
-.hero-btn {
-    display: inline-block;
-    padding: 12px 34px;
-    background: #E9876A;
-    color: #2B1B14;
-    font-weight: 700;
-    font-size: 1.1rem;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: transform .2s, background .2s;
-}
-
-.hero-btn:hover {
-    background: #D4704F;
-    transform: translateY(-2px);
-}
-
-@media (max-width: 600px) {
-    .hero {
-        background-position: center top; /* عدّلها حسب الجزء المهم في صورتك */
-    }
-}
-
 /*االى هنا*/
