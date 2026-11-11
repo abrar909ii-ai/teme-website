@@ -200,19 +200,14 @@ main h1 {
   color: #9e4a4a;
 }
 
-.about-page .card a {
-  color: #6f7d4e;                      /* روابط خضراء */
-  font-weight: bold;
-}
-
-/* زر Read more */
-.hidden {
-  display: none;
+.about-page .card {
+  background: #fffaf0;            /* لون خلفية البطاقة */
+  border-top: 5px solid #E8896F;  /* الإطار البرتقالي فوق البطاقة */
 }
 
 .about-page .card button {
-  background: #e08c3a;
-  color: #fff;
+  background: #E8896F;            /* لون زر Read more */
+  color: #fff;                    /* لون نص الزر */
   border: none;
   padding: 8px 20px;
   border-radius: 20px;
@@ -221,7 +216,7 @@ main h1 {
 }
 
 .about-page .card button:hover {
-  background: #9e4a4a;
+  background: #9e4a4a;            /* لون الزر عند المرور بالماوس */
 }
 
 /* أسماء الفريق */
