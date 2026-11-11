@@ -237,6 +237,9 @@ main h1 {
   border-radius: 20px;
   font-weight: bold;
 }
+.about-page .card .hidden {
+  display: none !important;
+}
 /* ===== End About page ===== */
 /* ===== Contact page ===== */
 
