@@ -392,6 +392,8 @@ h2 { color: #432D29; font-size: 32px; }
 p { color: #65534D; line-height: 1.8; }
 
 /* تنسيق عنوان Animals في المنتصف وبحجم كبير */
+
+/* 1. تنسيق عنوان Animals في المنتصف وبحجم كبير */
 .animals-title {
     text-align: center;
     font-size: 2.5rem;
@@ -400,17 +402,17 @@ p { color: #65534D; line-height: 1.8; }
     color: #333;
 }
 
-/* تنسيق الحاوية لتكون شبكة من عمودين (صورتين جنب بعض: البسة والكلب، تحتها البرد والدك) */
-.container, .cards {
+/* 2. تنسيق الحاوية لجعل البطاقات بجانب بعضها (صورتين في كل صف) وملء مساحة الشاشة */
+.container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* عمودين متساوين لتعبئة مساحة الشاشة */
-    gap: 20px;                             /* مسافة متناسقة وقليلة بين المربعات */
-    max-width: 800px;                      /* أقصى عرض لئلا تتباعد كثيراً عن بعضها */
+    grid-template-columns: repeat(2, 1fr); /* عمودين متساوين */
+    gap: 20px;                             /* مسافة متناسقة بين المربعات */
+    max-width: 800px;                      /* أقصى عرض لئلا تتباعد كثيراً */
     margin: 0 auto;                        /* لتوسيط الشبكة في منتصف الشاشة */
     padding: 0 15px;
 }
 
-/* تنسيق المربع (الذي تحول إلى رابط) */
+/* 3. تنسيق البطاقة الأساسي مع تأثير الترانزيشن السلس (0.3 ثانية) */
 .card {
     background-color: #fcf8f2;
     border-radius: 16px;
@@ -419,23 +421,46 @@ p { color: #65534D; line-height: 1.8; }
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
-    transition: transform 0.2s ease;
+    transition: all 0.3s ease;             /* تأثير الترانزيشن لكل الخصائص بسلاسة خلال 0.3 ثانية */
 }
 
-/* تأثير حركي خفيف عند المرور بالفأرة على المربع */
+/* تأثير تحريك خفيف للأعلى عند تمرير الماوس */
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
 }
 
-/* جعل الصورة تملأ المربع بالكامل */
+/* 4. تخصيص لون كل بطاقة حسب الحيوان عند تمرير الماوس (:hover) */
+
+/* العصفور -> أزرق فاتح */
+.card[href="bird-info.html"]:hover {
+    background-color: #e3f2fd;
+}
+
+/* الكلب -> بني فاتح */
+.card[href="dog-info.html"]:hover {
+    background-color: #efebe9;
+}
+
+/* القطة -> رمادي/بيج هادئ ودافئ */
+.card[href="cat-info.html"]:hover {
+    background-color: #f5f0eb;
+}
+
+/* البطة -> أصفر فاتح */
+.card[href="duck-info.html"]:hover {
+    background-color: #fffde7;
+}
+
+/* 5. جعل الصورة تملأ المربع بالكامل */
 .card img {
     width: 100%;
-    height: 250px;                         /* ارتفاع متناسق وممتاز للصورة داخل المربع */
-    object-fit: cover;                     /* تغطية كامل المساحة دون أي تشويه للصورة */
+    height: 250px;
+    object-fit: cover;                     /* تغطية كامل المساحة بدون تشويه */
     display: block;
 }
 
-/* تنسيق اسم الحيوان داخل المربع */
+/* 6. تنسيق اسم الحيوان داخل المربع */
 .card h2 {
     text-align: center;
     font-size: 1.5rem;
