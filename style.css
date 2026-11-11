@@ -173,6 +173,18 @@ main h1 {
 .about-page h1 {
   color: #9e4a4a;                      /* أحمر Heather */
 }
+.about-page .card a {
+  color: #6f7d4e;                /* أخضر للروابط */
+  font-weight: bold;
+}
+
+.about-page .card a:visited {
+  color: #6f7d4e;                /* يخلي الرابط المزار أخضر بعد ما تزوره */
+}
+
+.about-page .card a:hover {
+  color: #9e4a4a;                /* لون الرابط عند المرور بالماوس */
+}
 
 .intro {
   max-width: 700px;
