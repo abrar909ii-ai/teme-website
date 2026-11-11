@@ -391,57 +391,57 @@ main h1 {
 h2 { color: #432D29; font-size: 32px; }
 p { color: #65534D; line-height: 1.8; }
 
-.cards {                       /*تنسيق صفحة ال Animal*/
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.card {
-    border-radius: 16px;
-    overflow: hidden;
-    padding-bottom: 20px;
-}
-
-.card img {
-    width: 30%;
-    height: 90px;
-    object-fit: cover;
-}
-/* عنوان القسم في النص وبحجم كبير */
+/* تنسيق عنوان Animals في المنتصف وبحجم كبير */
 .animals-title {
     text-align: center;
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    color: #333;
 }
 
-/* جعل المربعات تحت بعضها البعض */
-.cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 30px;
+/* تنسيق الحاوية لتكون شبكة من عمودين (صورتين جنب بعض: البسة والكلب، تحتها البرد والدك) */
+.container, .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* عمودين متساوين لتعبئة مساحة الشاشة */
+    gap: 20px;                             /* مسافة متناسقة وقليلة بين المربعات */
+    max-width: 800px;                      /* أقصى عرض لئلا تتباعد كثيراً عن بعضها */
+    margin: 0 auto;                        /* لتوسيط الشبكة في منتصف الشاشة */
+    padding: 0 15px;
 }
 
-/* تنسيق المربع */
+/* تنسيق المربع (الذي تحول إلى رابط) */
 .card {
-    width: 100%;
-    max-width: 500px;
+    background-color: #fcf8f2;
     border-radius: 16px;
     overflow: hidden;
-    background-color: #fcf8f2;
-    text-align: center;
+    text-decoration: none;                 /* إلغاء الخط تحت الرابط */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+/* تأثير حركي خفيف عند المرور بالفأرة على المربع */
+.card:hover {
+    transform: translateY(-5px);
 }
 
 /* جعل الصورة تملأ المربع بالكامل */
 .card img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 250px;                         /* ارتفاع متناسق وممتاز للصورة داخل المربع */
+    object-fit: cover;                     /* تغطية كامل المساحة دون أي تشويه للصورة */
     display: block;
+}
+
+/* تنسيق اسم الحيوان داخل المربع */
+.card h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #5c3a21;
+    padding: 15px 0;
+    margin: 0;
 }
 
 .card h3 { color: #754D43; }
@@ -475,24 +475,22 @@ p { color: #65534D; line-height: 1.8; }
 <h1 class="title">Animals</h1>
 
 <div class="container">
-    <div class="card">
+<a href="bird-info.html" class="card">
         <img src="path/to/bird.jpg" alt="Bird">
         <h2>Bird</h2>
-    </div>
-
-    <div class="card">
+</a>
+<a href="dog-info.html" class="card">
         <img src="path/to/dog.jpg" alt="Dog">
         <h2>Dog</h2>
-    </div>
-
-    <div class="card">
+</a>
+<a href="cat-info.html" class="card">
         <img src="path/to/cat.jpg" alt="Cat">
         <h2>Cat</h2>
-    </div>
-
-    <div class="card">
+</a>
+<a href="duck-info.html" class="card">
         <img src="path/to/duck.jpg" alt="Duck">
         <h2>Duck</h2>
-    </div>
+</a>
+    
 </div>
 
