@@ -399,7 +399,7 @@ p { color: #65534D; line-height: 1.8; }
     font-size: 2.5rem;
     font-weight: bold;
     color: #5c3a21; /* لون بني دافئ متناسق مع الموقع */
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-family: 'Comic Sans MS', cursive, sans-serif; /* يطي طابع لطيف وودي، أو يمكنك استخدام خطك المفضل */
 }
 }
@@ -407,8 +407,7 @@ p { color: #65534D; line-height: 1.8; }
     text-align: center;
     font-size: 1.1rem;
     color: #8c6d53;
-    margin-top: -15px;
-    margin-bottom: 30px;
+   margin: 0;
 }
 
 /* 2. تنسيق الحاوية لجعل البطاقات بجانب بعضها (صورتين في كل صف) وملء مساحة الشاشة */
@@ -416,7 +415,7 @@ p { color: #65534D; line-height: 1.8; }
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* عمودين متساوين */
     gap: 20px;                             /* مسافة متناسقة بين المربعات */
-    max-width: 800px;                      /* أقصى عرض لئلا تتباعد كثيراً */
+    max-width: 700px;                      /* أقصى عرض لئلا تتباعد كثيراً */
     margin: 0 auto;                        /* لتوسيط الشبكة في منتصف الشاشة */
     padding: 0 15px;
 }
