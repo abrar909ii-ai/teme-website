@@ -437,3 +437,68 @@ p { color: #65534D; line-height: 1.8; }
     h2 { font-size: 26px; }
 }
 /*االى هنا*/
+/* تنسيق عنوان "Animals" في منتصف الصفحة وبحجم كبير */
+.title {
+    text-align: center;
+    font-size: 2.5rem; /* حجم كبير للعنوان */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* جعل المربعات تظهر تحت بعضها البعض */
+.container {
+    display: flex;
+    flex-direction: column; /* ترتيب رأسي تحت بعض */
+    align-items: center;    /* توسيط المربعات في منتصف الصفحة */
+    gap: 20px;              /* مسافة بين كل مربع والآخر */
+}
+
+/* تنسيق المربع (الكارت) */
+.card {
+    width: 100%;            /* أو تحديد عرض معين مثل 400px */
+    max-width: 500px;       /* أقصى عرض للمربع */
+    background-color: #fcf8f2;
+    border-radius: 16px;
+    overflow: hidden;       /* لضمان عدم خروج الصورة عن الحواف المنحنية */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* جعل الصورة ملء المربع بالكامل */
+.card img {
+    width: 100%;            /* تأخذ كامل عرض المربع */
+    height: 300px;          /* يمكن تحديد ارتفاع مناسب */
+    object-fit: cover;      /* تغطية المربع بالكامل دون تشويه الصورة */
+    display: block;
+}
+
+/* تنسيق الاسم داخل المربع */
+.card h2 {
+    font-size: 1.8rem;
+    color: #5c3a21;
+    margin: 15px 0;
+}
+<h1 class="title">Animals</h1>
+
+<div class="container">
+    <div class="card">
+        <img src="path/to/bird.jpg" alt="Bird">
+        <h2>Bird</h2>
+    </div>
+
+    <div class="card">
+        <img src="path/to/dog.jpg" alt="Dog">
+        <h2>Dog</h2>
+    </div>
+
+    <div class="card">
+        <img src="path/to/cat.jpg" alt="Cat">
+        <h2>Cat</h2>
+    </div>
+
+    <div class="card">
+        <img src="path/to/duck.jpg" alt="Duck">
+        <h2>Duck</h2>
+    </div>
+</div>
+
