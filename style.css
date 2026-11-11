@@ -401,31 +401,40 @@ p { color: #65534D; line-height: 1.8; }
     margin-bottom: 10px;
 }
 
+/* 1. تنسيق العنوان الرئيسي في المنتصف */
+.animals-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #5c3a21;
+    margin-bottom: 10px;
+}
+
 /* 2. تنسيق جملة الوصف لتكون في المنتصف وتحت العنوان */
 .animals-subtitle {
     text-align: center;
     font-size: 1.1rem;
     color: #8c6d53;
-    margin: 0 0 30px 0;
+    margin: 0 0 35px 0;
 }
 
-/* 3. جعل الشبكة تأخذ مساحة أوسع من الشاشة وبشكل متناسق (صورتين في الصف) */
+/* 3. توسيع الحاوية بالكامل لتأخذ مساحة عريضة ومريحة في الشاشة */
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 1000px;
+    grid-template-columns: repeat(2, 1fr); /* صورتين في الصف */
+    gap: 40px;                             /* مسافة واسعة وجميلة بين المربعات */
+    max-width: 1200px;                     /* زيادة العرض ليكون عريضاً وواسعاً جداً */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 30px;
 }
 
-/* 4. تنسيق البطاقة الأساسي مع تأثير الترانزيشن السلس (0.3 ثانية) */
+/* 4. تنسيق البطاقة مع جعلها تأخذ عرضاً أفقياً واسعاً */
 .card {
     background-color: #fcf8f2;
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
     transition: background-color 0.3s ease;
@@ -453,21 +462,20 @@ p { color: #65534D; line-height: 1.8; }
     background-color: #fffde7;
 }
 
-/* 6. جعل الصورة تأخذ مساحة عريضة وواضحة جداً بدون تشويه */
+/* 6. جعل الصورة عريضة وواضحة جداً وتملأ المربع بأفقية تامة */
 .card img {
     width: 100%;
-    height: 320px; /* جربي زيادته إلى 320px ليصبح عريضاً وواضحاً تماماً */
-    object-fit: cover;
+    height: 300px;                         /* طول متناسق وجميل */
+    object-fit: cover;                     /* تغطية كاملة ومثالية دون أي تشويه أو ضيق */
     display: block;
 }
-
 
 /* 7. تنسيق اسم الحيوان داخل الكارد */
 .card h2 {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #5c3a21;
-    padding: 18px 0;
+    padding: 20px 0;
     margin: 0;
 }
 .card h3 { color: #754D43; }
