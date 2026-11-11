@@ -472,25 +472,3 @@ p { color: #65534D; line-height: 1.8; }
 }
 /*االى هنا*/
 
-<h1 class="title">Animals</h1>
-
-<div class="container">
-<a href="bird-info.html" class="card">
-        <img src="path/to/bird.jpg" alt="Bird">
-        <h2>Bird</h2>
-</a>
-<a href="dog-info.html" class="card">
-        <img src="path/to/dog.jpg" alt="Dog">
-        <h2>Dog</h2>
-</a>
-<a href="cat-info.html" class="card">
-        <img src="path/to/cat.jpg" alt="Cat">
-        <h2>Cat</h2>
-</a>
-<a href="duck-info.html" class="card">
-        <img src="path/to/duck.jpg" alt="Duck">
-        <h2>Duck</h2>
-</a>
-    
-</div>
-
