@@ -391,7 +391,7 @@ main h1 {
 h2 { color: #432D29; font-size: 32px; }
 p { color: #65534D; line-height: 1.8; }
 
-.cards {
+.cards {                       /*تنسيق صفحة ال Animal*/
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
@@ -409,6 +409,40 @@ p { color: #65534D; line-height: 1.8; }
     height: 90px;
     object-fit: cover;
 }
+/* عنوان القسم في النص وبحجم كبير */
+.animals-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* جعل المربعات تحت بعضها البعض */
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* تنسيق المربع */
+.card {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #fcf8f2;
+    text-align: center;
+}
+
+/* جعل الصورة تملأ المربع بالكامل */
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
 
 .card h3 { color: #754D43; }
 
@@ -419,7 +453,7 @@ p { color: #65534D; line-height: 1.8; }
 .cta h2, .cta p { color: white; }
 
 .cta a {
-    display: inline-block;
+    display: block;
     background: #E7B7A4;
     color: #432D29;
     padding: 12px 25px;
@@ -437,47 +471,7 @@ p { color: #65534D; line-height: 1.8; }
     h2 { font-size: 26px; }
 }
 /*االى هنا*/
-/* تنسيق عنوان "Animals" في منتصف الصفحة وبحجم كبير */
-.title {
-    text-align: center;
-    font-size: 2.5rem; /* حجم كبير للعنوان */
-    font-weight: bold;
-    margin-bottom: 20px;
-}
 
-/* جعل المربعات تظهر تحت بعضها البعض */
-.container {
-    display: flex;
-    flex-direction: column; /* ترتيب رأسي تحت بعض */
-    align-items: center;    /* توسيط المربعات في منتصف الصفحة */
-    gap: 20px;              /* مسافة بين كل مربع والآخر */
-}
-
-/* تنسيق المربع (الكارت) */
-.card {
-    width: 100%;            /* أو تحديد عرض معين مثل 400px */
-    max-width: 500px;       /* أقصى عرض للمربع */
-    background-color: #fcf8f2;
-    border-radius: 16px;
-    overflow: hidden;       /* لضمان عدم خروج الصورة عن الحواف المنحنية */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    text-align: center;
-}
-
-/* جعل الصورة ملء المربع بالكامل */
-.card img {
-    width: 100%;            /* تأخذ كامل عرض المربع */
-    height: 300px;          /* يمكن تحديد ارتفاع مناسب */
-    object-fit: cover;      /* تغطية المربع بالكامل دون تشويه الصورة */
-    display: block;
-}
-
-/* تنسيق الاسم داخل المربع */
-.card h2 {
-    font-size: 1.8rem;
-    color: #5c3a21;
-    margin: 15px 0;
-}
 <h1 class="title">Animals</h1>
 
 <div class="container">
