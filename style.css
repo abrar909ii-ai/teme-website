@@ -403,6 +403,13 @@ p { color: #65534D; line-height: 1.8; }
     font-family: 'Comic Sans MS', cursive, sans-serif; /* يطي طابع لطيف وودي، أو يمكنك استخدام خطك المفضل */
 }
 }
+.animals-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #8c6d53;
+    margin-top: -15px;
+    margin-bottom: 30px;
+}
 
 /* 2. تنسيق الحاوية لجعل البطاقات بجانب بعضها (صورتين في كل صف) وملء مساحة الشاشة */
 .container {
