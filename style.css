@@ -204,7 +204,9 @@ main h1 {
   background: #fffaf0;            /* لون خلفية البطاقة */
   border-top: 5px solid #E8896F;  /* الإطار البرتقالي فوق البطاقة */
 }
-
+.hidden {
+  display: none;
+}
 .about-page .card button {
   background: #E8896F;            /* لون زر Read more */
   color: #fff;                    /* لون نص الزر */
