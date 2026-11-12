@@ -405,14 +405,6 @@ p { color: #65534D; line-height: 1.8; }
 
 /* 1. تنسيق عنوان Animals في المنتصف وبحجم كبير */
 /* 1. تنسيق العنوان الرئيسي في المنتصف */
-.animals-title {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #5c3a21;
-    margin-bottom: 10px;
-}
-
 /* 1. تنسيق العنوان الرئيسي في المنتصف */
 .animals-title {
     text-align: center;
@@ -430,14 +422,16 @@ p { color: #65534D; line-height: 1.8; }
     margin: 0 0 35px 0;
 }
 
-/* 3. توسيع الحاوية بالكامل لتأخذ مساحة عريضة ومريحة في الشاشة */
+/* 3. جعل الحاوية تأخذ عرض الشاشة بالكامل وتوزيع البطاقات جنباً إلى جنب */
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* صورتين في الصف */
+    grid-template-columns: repeat(2, 1fr); /* صورتين في كل صف */
     gap: 40px;                             /* مسافة واسعة وجميلة بين المربعات */
-    max-width: 1200px;                     /* زيادة العرض ليكون عريضاً وواسعاً جداً */
-    margin: 0 auto;
-    padding: 0 30px;
+    width: 100%;                           /* تأخذ عرض الشاشة بالكامل */
+    max-width: 100%;                       /* إلغاء الحد الأقصى السابق ليفرش الشاشة */
+    margin: 0;
+    padding: 0 40px;                       /* هوامش داخلية خفيفة من الجانبين لكي لا تلتصق البطاقات بحواف الشاشة */
+    box-sizing: border-box;
 }
 
 /* 4. تنسيق البطاقة مع جعلها تأخذ عرضاً أفقياً واسعاً */
