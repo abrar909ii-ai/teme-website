@@ -1,1 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Details - Tweety</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pet-detail-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #fcf8f2;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+        }
 
+        @media (min-width: 768px) {
+            .pet-detail-container {
+                flex-direction: row;
+            }
+        }
+
+        .pet-image-side {
+            flex: 1;
+        }
+
+        .pet-image-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 350px;
+            display: block;
+        }
+
+        .pet-info-side {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .pet-name {
+            font-size: 2.2rem;
+            color: #5c3a21;
+            margin-bottom: 10px;
+        }
+
+        .pet-breed {
+            font-size: 1.1rem;
+            color: #8c6d53;
+            margin-bottom: 20px;
+        }
+
+        .pet-specs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+            background-color: #f5f0eb;
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .spec-item {
+            font-size: 0.95rem;
+            color: #5c3a21;
+        }
+
+        .spec-item span {
+            font-weight: bold;
+            color: #8c6d53;
+        }
+
+        .pet-story {
+            font-size: 1rem;
+            color: #6b4f3b;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* قسم التغذية والعناية */
+        .nutrition-section {
+            background-color: #f5f0eb;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .nutrition-title {
+            font-size: 1.1rem;
+            color: #5c3a21;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nutrition-desc {
+            font-size: 0.9rem;
+            color: #6b4f3b;
+            margin-bottom: 10px;
+        }
+
+        .nutrition-toggle-link {
+            font-size: 0.9rem;
+            color: #5c3a21;
+            font-weight: bold;
+            text-decoration: underline;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .nutrition-toggle-link:hover {
+            color: #8c6d53;
+        }
+
+        .nutrition-details {
+            display: none;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #e2d6cc;
+            font-size: 0.9rem;
+            color: #5c3a21;
+            line-height: 1.5;
+        }
+
+        .nutrition-details ul {
+            margin: 5px 0 0 20px;
+            padding: 0;
+        }
+
+        .adopt-btn {
+            display: inline-block;
+            text-align: center;
+            background-color: #5c3a21;
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .adopt-btn:hover {
+            background-color: #8c6d53;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0 40px 0;
+            color: #5c3a21;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header class="site-header" style="direction: ltr;">
+        <div class="header-inner">
+            <a href="index.html" class="brand">
+                <img src="animals-image1.png" alt="Logo" class="logo-img">
+                <div class="brand-text">
+                   <span class="brand-name">MA'WA</span>
+                    <span class="brand-tag">Every Paw Deservse a Home</span>
+                </div>
+            </a>
+            <nav>
+               <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="animals.html" class="active">Animals</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="header-btn">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="pet-detail-container">
+            <!-- صورة العصفور -->
+            <div class="pet-image-side">
+                <img src="Bird.jpeg" alt="Bird">
+            </div>
+
+            <!-- معلومات وتفاصيل العصفور -->
+            <div class="pet-info-side">
+                <div>
+                    <h1 class="pet-name">Tweety 🐦</h1>
+                    <p class="pet-breed">Cheerful Budgie Bird</p>
+                    
+                    <!-- المواصفات الأساسية -->
+                    <div class="pet-specs">
+                        <div class="spec-item"><span>Age:</span> 5 Months</div>
+                        <div class="spec-item"><span>Gender:</span> Male</div>
+                        <div class="spec-item"><span>Health:</span> Vet Checked</div>
+                        <div class="spec-item"><span>Activity:</span> Very Active & Social</div>
+                    </div>
+
+                    <!-- نبذة عن العصفور -->
+                    <p class="pet-story">
+                        Tweety is a joyful and vibrant little bird who loves to sing melodic tunes all day long. He is very friendly, curious, and enjoys interacting with his surroundings. Looking for a cheerful companion? Tweety is ready!
+                    </p>
+
+                    <!-- قسم التغذية والعناية -->
+                    <div class="nutrition-section">
+                        <div class="nutrition-title">
+                            <span>🌱</span> Feeding & Care Guide
+                        </div>
+                        <p class="nutrition-desc">
+                            Discover what keeps Tweety singing and healthy every day.
+                        </p>
+                        <button class="nutrition-toggle-link" onclick="toggleNutrition()">View Feeding Tips ▼</button>
+                        
+                        <div id="nutritionContent" class="nutrition-details">
+                            <ul>
+                                <li>High-quality seed mix and fresh pellets daily.</li>
+                                <li>Fresh leafy greens (like spinach or lettuce) as treats.</li>
+                                <li>Clean drinking water changed daily.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- زر التبني -->
+                <a href="contact.html" class="adopt-btn">Adopt Tweety Now ❤️</a>
+            </div>
+        </div>
+
+        <a href="animals.html" class="back-link">← Back to Animals</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function toggleNutrition() {
+            var content = document.getElementById("nutritionContent");
+            var link = document.querySelector(".nutrition-toggle-link");
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                link.innerText = "View Feeding Tips ▼";
+            } else {
+                content.style.display = "block";
+                link.innerText = "Hide Feeding Tips ▲";
+            }
+        }
+    </script>
+</body>
+</html>
