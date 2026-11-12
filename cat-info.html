@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat Details - تفاصيل القطة</title>
+    <title>Cat Details - Luna</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* تنسيقات خاصة بصفحة تفاصيل الحيوان لتتناسب مع هوية موقعك */
         .pet-detail-container {
             max-width: 900px;
             margin: 40px auto;
@@ -60,7 +59,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             background-color: #f5f0eb;
             padding: 15px;
             border-radius: 12px;
@@ -80,7 +79,62 @@
             font-size: 1rem;
             color: #6b4f3b;
             line-height: 1.6;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* قسم التغذية والعناية الجديد */
+        .nutrition-section {
+            background-color: #f5f0eb;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .nutrition-title {
+            font-size: 1.1rem;
+            color: #5c3a21;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nutrition-desc {
+            font-size: 0.9rem;
+            color: #6b4f3b;
+            margin-bottom: 10px;
+        }
+
+        .nutrition-toggle-link {
+            font-size: 0.9rem;
+            color: #5c3a21;
+            font-weight: bold;
+            text-decoration: underline;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .nutrition-toggle-link:hover {
+            color: #8c6d53;
+        }
+
+        /* محتوى التغذية الذي سيظهر/يختفي في نفس الصفحة */
+        .nutrition-details {
+            display: none;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #e2d6cc;
+            font-size: 0.9rem;
+            color: #5c3a21;
+            line-height: 1.5;
+        }
+
+        .nutrition-details ul {
+            margin: 5px 0 0 20px;
+            padding: 0;
         }
 
         .adopt-btn {
@@ -116,11 +170,11 @@
 </head>
 <body>
 
-    <!-- الهيدر الخاص بك (نفس الموجود في الصفحات الأخرى) -->
+    <!-- الهيدر -->
     <header class="site-header" style="direction: ltr;">
         <div class="header-inner">
             <a href="index.html" class="brand">
-                <img src="animals-image1.png" alt="شعار المشروع" class="logo-img">
+                <img src="animals-image1.png" alt="Logo" class="logo-img">
                 <div class="brand-text">
                    <span class="brand-name">MA'WA</span>
                     <span class="brand-tag">Every Paw Deservse a Home</span>
@@ -149,34 +203,69 @@
             <!-- معلومات وتفاصيل القطة -->
             <div class="pet-info-side">
                 <div>
-                    <h1 class="pet-name">Luna (لونا)</h1>
-                    <p class="pet-breed">قطة شيرازي لطيفة وهادئة</p>
+                    <h1 class="pet-name">Luna 🐱</h1>
+                    <p class="pet-breed">Sweet and Calm Persian Cat</p>
                     
                     <!-- المواصفات الأساسية -->
                     <div class="pet-specs">
-                        <div class="spec-item"><span>العمر:</span> 8 شهور</div>
-                        <div class="spec-item"><span>الجنس:</span> أنثى</div>
-                        <div class="spec-item"><span>الحالة الصحية:</span> مطعمة ومعقمة</div>
-                        <div class="spec-item"><span>التدريب:</span> معتادة على الصندوق</div>
+                        <div class="spec-item"><span>Age:</span> 8 Months</div>
+                        <div class="spec-item"><span>Gender:</span> Female</div>
+                        <div class="spec-item"><span>Health:</span> Vaccinated & Neutered</div>
+                        <div class="spec-item"><span>Training:</span> Litter Trained</div>
                     </div>
 
-                    <!-- قصة أو نبذة عن القطة -->
+                    <!-- نبذة عن القطة -->
                     <p class="pet-story">
-                        لونا قطة رقيقة جداً وحنونة، تحب الجلوس بجانب النافذة واللعب بالألعاب الخفيفة. تم إنقاذها وهي صغيرة، وهي الآن تبحث عن عائلة تمنحها الحب والأمان في منزل دافئ.
+                        Luna is a very sweet and affectionate cat who loves sitting by the window and playing with gentle toys. She was rescued as a kitten and is now looking for a warm, loving home.
                     </p>
+
+                    <!-- قسم التغذية والعناية (مع رابط يفتح النقاط في نفس الصفحة) -->
+                    <div class="nutrition-section">
+                        <div class="nutrition-title">
+                            <span>🥩</span> Feeding & Care Guide
+                        </div>
+                        <p class="nutrition-desc">
+                            Want to know what keeps Luna healthy and happy? Check out her basic diet requirements below.
+                        </p>
+                        <!-- زر أو رابط للفتح في نفس الصفحة بدون مغادرتها -->
+                        <button class="nutrition-toggle-link" onclick="toggleNutrition()">View Feeding Tips ▼</button>
+                        
+                        <!-- النقاط الأساسية التي ستظهر عند الضغط -->
+                        <div id="nutritionContent" class="nutrition-details">
+                            <ul>
+                                <li>High-quality dry and wet food formulated for kittens.</li>
+                                <li>Fresh, clean drinking water available 24/7.</li>
+                                <li>Avoid dairy products and human sweets.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- زر التبني -->
-                <a href="contact.html" class="adopt-btn">تبني Luna الآن ❤️</a>
+                <a href="contact.html" class="adopt-btn">Adopt Luna Now ❤️</a>
             </div>
         </div>
 
-        <a href="animals.html" class="back-link">← العودة إلى قائمة الحيوانات</a>
+        <a href="animals.html" class="back-link">← Back to Animals</a>
     </main>
 
     <footer>
-        <p>&copy; 2026 جميع الحقوق محفوظة</p>
+        <p>&copy; 2026 All Rights Reserved</p>
     </footer>
 
+    <!-- سكود بسيط جداً للتحكم بظهور وإخفاء معلومات التغذية في نفس الصفحة -->
+    <script>
+        function toggleNutrition() {
+            var content = document.getElementById("nutritionContent");
+            var link = document.querySelector(".nutrition-toggle-link");
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                link.innerText = "View Feeding Tips ▼";
+            } else {
+                content.style.display = "block";
+                link.innerText = "Hide Feeding Tips ▲";
+            }
+        }
+    </script>
 </body>
 </html>
