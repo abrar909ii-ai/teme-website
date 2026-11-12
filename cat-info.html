@@ -1,1 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Details - تفاصيل القطة</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* تنسيقات خاصة بصفحة تفاصيل الحيوان لتتناسب مع هوية موقعك */
+        .pet-detail-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #fcf8f2;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+        }
 
+        @media (min-width: 768px) {
+            .pet-detail-container {
+                flex-direction: row;
+            }
+        }
+
+        .pet-image-side {
+            flex: 1;
+        }
+
+        .pet-image-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 350px;
+            display: block;
+        }
+
+        .pet-info-side {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .pet-name {
+            font-size: 2.2rem;
+            color: #5c3a21;
+            margin-bottom: 10px;
+        }
+
+        .pet-breed {
+            font-size: 1.1rem;
+            color: #8c6d53;
+            margin-bottom: 20px;
+        }
+
+        .pet-specs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+            background-color: #f5f0eb;
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .spec-item {
+            font-size: 0.95rem;
+            color: #5c3a21;
+        }
+
+        .spec-item span {
+            font-weight: bold;
+            color: #8c6d53;
+        }
+
+        .pet-story {
+            font-size: 1rem;
+            color: #6b4f3b;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .adopt-btn {
+            display: inline-block;
+            text-align: center;
+            background-color: #5c3a21;
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .adopt-btn:hover {
+            background-color: #8c6d53;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0 40px 0;
+            color: #5c3a21;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر الخاص بك (نفس الموجود في الصفحات الأخرى) -->
+    <header class="site-header" style="direction: ltr;">
+        <div class="header-inner">
+            <a href="index.html" class="brand">
+                <img src="animals-image1.png" alt="شعار المشروع" class="logo-img">
+                <div class="brand-text">
+                   <span class="brand-name">MA'WA</span>
+                    <span class="brand-tag">Every Paw Deservse a Home</span>
+                </div>
+            </a>
+            <nav>
+               <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="animals.html" class="active">Animals</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="header-btn">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="pet-detail-container">
+            <!-- صورة القطة -->
+            <div class="pet-image-side">
+                <img src="Cat.jpeg" alt="Cat">
+            </div>
+
+            <!-- معلومات وتفاصيل القطة -->
+            <div class="pet-info-side">
+                <div>
+                    <h1 class="pet-name">Luna (لونا)</h1>
+                    <p class="pet-breed">قطة شيرازي لطيفة وهادئة</p>
+                    
+                    <!-- المواصفات الأساسية -->
+                    <div class="pet-specs">
+                        <div class="spec-item"><span>العمر:</span> 8 شهور</div>
+                        <div class="spec-item"><span>الجنس:</span> أنثى</div>
+                        <div class="spec-item"><span>الحالة الصحية:</span> مطعمة ومعقمة</div>
+                        <div class="spec-item"><span>التدريب:</span> معتادة على الصندوق</div>
+                    </div>
+
+                    <!-- قصة أو نبذة عن القطة -->
+                    <p class="pet-story">
+                        لونا قطة رقيقة جداً وحنونة، تحب الجلوس بجانب النافذة واللعب بالألعاب الخفيفة. تم إنقاذها وهي صغيرة، وهي الآن تبحث عن عائلة تمنحها الحب والأمان في منزل دافئ.
+                    </p>
+                </div>
+
+                <!-- زر التبني -->
+                <a href="contact.html" class="adopt-btn">تبني Luna الآن ❤️</a>
+            </div>
+        </div>
+
+        <a href="animals.html" class="back-link">← العودة إلى قائمة الحيوانات</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 جميع الحقوق محفوظة</p>
+    </footer>
+
+</body>
+</html>
