@@ -1,54 +1,227 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - المعرض</title>
+    <title>Quiz - Are You Ready to Adopt?</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- هنا الشريط العلوي لا تغيريه -->
-   <header class="site-header" style="direction: ltr;">
-    <div class="header-inner">
+  <!-- Top bar starts here - do not change -->
+    <header class="site-header" style="direction: ltr;">
+     <div class="header-inner">
 
-        <a href="index.html" class="brand">
-            <img src="animals-image1.png" alt="شعار المشروع" class="logo-img">
-            <div class="brand-text">
-              <span class="brand-name">MA'WA</span>
-                <span class="brand-tag">Every Paw Deservse a Home</span>
+          <a href="index.html" class="brand">
+              <img src="animals-image1.png" alt="Project logo" class="logo-img">
+              <div class="brand-text">
+                <span class="brand-name">MA'WA</span>
+                  <span class="brand-tag">Every Paw Deservse a Home</span>
             </div>
-        </a>
+          </a>
 
-        <nav>
-           <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="animals.html">Animals</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="quiz.html" class="active">Quiz</a></li>
-</ul>
-        </nav>
+          <nav>
+             <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="animals.html">Animals</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="quiz.html" class="active">Quiz</a></li>
+    </ul>
+          </nav>
 
-        <a href="contact.html" class="header-btn">Contact Us</a>
+          <a href="contact.html" class="header-btn">Contact Us</a>
 
-    </div>
-</header>
-<!--  الي هنا  -->
+      </div>
+  </header>
+  <!-- Up to here -->
 
     <main>
-        <h1>المعرض</h1>
+        <h1>Are You Ready to Adopt?</h1>
         <div class="card">
-            <p>اكتب هنا محتوى الصفحة.</p>
+            <p class="quiz-intro">Answer these 6 quick questions and we will tell you if you are ready to welcome a pet into your home, and which animal might suit you best.</p>
+
+            <!-- Progress bar (JavaScript feature) -->
+            <div class="progress"><div id="progress-bar"></div></div>
+            <p id="progress-text" class="progress-text">0 of 6 answered</p>
+
+            <form id="quiz-form">
+
+                <!-- Question 1 -->
+                <fieldset class="question">
+                    <legend>1. How much space do you have at home?</legend>
+                    <label><input type="radio" name="q1" value="3"> A house with a garden or yard</label>
+                    <label><input type="radio" name="q1" value="2"> A large apartment</label>
+                    <label><input type="radio" name="q1" value="1"> A small apartment</label>
+                    <label><input type="radio" name="q1" value="0"> A single room</label>
+                </fieldset>
+
+                <!-- Question 2 -->
+                <fieldset class="question">
+                    <legend>2. How many hours are you away from home each day?</legend>
+                    <label><input type="radio" name="q2" value="3"> Less than 4 hours</label>
+                    <label><input type="radio" name="q2" value="2"> 4 to 8 hours</label>
+                    <label><input type="radio" name="q2" value="1"> 8 to 10 hours</label>
+                    <label><input type="radio" name="q2" value="0"> More than 10 hours</label>
+                </fieldset>
+
+                <!-- Question 3 -->
+                <fieldset class="question">
+                    <legend>3. Have you taken care of a pet before?</legend>
+                    <label><input type="radio" name="q3" value="3"> Yes, I have years of experience</label>
+                    <label><input type="radio" name="q3" value="2"> Yes, a little experience</label>
+                    <label><input type="radio" name="q3" value="1"> No, but I am willing to learn</label>
+                    <label><input type="radio" name="q3" value="0"> No, and I am not sure I can</label>
+                </fieldset>
+
+                <!-- Question 4 -->
+                <fieldset class="question">
+                    <legend>4. Can your monthly budget cover food, vet visits and supplies?</legend>
+                    <label><input type="radio" name="q4" value="3"> Yes, comfortably</label>
+                    <label><input type="radio" name="q4" value="2"> Yes, with some planning</label>
+                    <label><input type="radio" name="q4" value="1"> It would be a bit tight</label>
+                    <label><input type="radio" name="q4" value="0"> No, not right now</label>
+                </fieldset>
+
+                <!-- Question 5 -->
+                <fieldset class="question">
+                    <legend>5. Does everyone in your home agree to adopt a pet?</legend>
+                    <label><input type="radio" name="q5" value="3"> Yes, everyone is excited</label>
+                    <label><input type="radio" name="q5" value="2"> Most people agree</label>
+                    <label><input type="radio" name="q5" value="1"> I have not asked them yet</label>
+                    <label><input type="radio" name="q5" value="0"> Someone has allergies or objects</label>
+                </fieldset>
+
+                <!-- Question 6 (not scored, used for the recommendation) -->
+                <fieldset class="question">
+                    <legend>6. Which type of animal do you prefer?</legend>
+                    <label><input type="radio" name="q6" value="Cat"> Cat</label>
+                    <label><input type="radio" name="q6" value="Dog"> Dog</label>
+                    <label><input type="radio" name="q6" value="Parrot"> Parrot</label>
+                    <label><input type="radio" name="q6" value="Hamster"> Hamster</label>
+                    <label><input type="radio" name="q6" value="Rabbit"> Rabbit</label>
+                </fieldset>
+
+                <div class="quiz-buttons">
+                    <button type="submit" class="quiz-btn">See My Result</button>
+                    <button type="reset" class="quiz-btn quiz-btn-secondary">Reset</button>
+                </div>
+            </form>
         </div>
     </main>
 
+    <!-- Result popup (shown in the middle of the page) -->
+    <div id="result-overlay" class="result-overlay">
+        <div class="result-box" id="result-box">
+            <h2 id="result-title"></h2>
+            <p id="result-score" class="result-score"></p>
+            <p id="result-message"></p>
+            <p id="result-animal" class="result-animal"></p>
+            <div class="result-buttons">
+                <button type="button" id="result-ok" class="quiz-btn quiz-btn-secondary">OK</button>
+                <a href="animals.html" class="quiz-btn">Meet Our Animals</a>
+                <button type="button" id="result-print" class="quiz-btn quiz-btn-secondary">Print Result</button>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2026 جميع الحقوق محفوظة</p>
+        <p>&copy; 2026 All rights reserved</p>
+        <p id="date"></p>
     </footer>
 
-</body>
-</html>
+    <script>
+        var form = document.getElementById("quiz-form");
+        var bar = document.getElementById("progress-bar");
+        var progressText = document.getElementById("progress-text");
+        var overlay = document.getElementById("result-overlay");
+        var box = document.getElementById("result-box");
+
+        // Feature 1: show the current date in the footer
+        var today = new Date();
+        document.getElementById("date").textContent =
+            "Today: " + today.toLocaleDateString("en-GB", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+
+        // Feature 2: progress bar that updates after each answer
+        function countAnswered() {
+            var answered = 0;
+            for (var i = 1; i <= 6; i++) {
+                if (form.querySelector('input[name="q' + i + '"]:checked')) {
+                    answered++;
+                }
+            }
+            return answered;
+        }
+
+        function updateProgress() {
+            var answered = countAnswered();
+            bar.style.width = (answered / 6 * 100) + "%";
+            progressText.textContent = answered + " of 6 answered";
+        }
+
+        form.addEventListener("change", updateProgress);
+        form.addEventListener("reset", function () {
+            setTimeout(updateProgress, 0);
+        });
+
+        // Feature 3: validation + calculate the result
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Check that every question is answered
+            for (var i = 1; i <= 6; i++) {
+                if (!form.querySelector('input[name="q' + i + '"]:checked')) {
+                    alert("Please answer question " + i + " before seeing your result.");
+                    form.querySelector('input[name="q' + i + '"]').closest("fieldset").scrollIntoView({ behavior: "smooth", block: "center" });
+                    return;
+                }
+            }
+
+            // Add up the score of questions 1 to 5 (maximum 15)
+            var score = 0;
+            for (var j = 1; j <= 5; j++) {
+                score += parseInt(form.querySelector('input[name="q' + j + '"]:checked').value);
+            }
+
+            var animal = form.querySelector('input[name="q6"]:checked').value;
+            var title, message, color;
+
+            if (score >= 11) {
+                title = "You are ready to adopt! 🐾";
+                message = "You have the space, time and budget to give a pet a loving home.";
+                color = "#4f9a6b";
+            } else if (score >= 7) {
+                title = "Almost ready! 🌱";
+                message = "You are close. A few things need planning first, such as time, budget or family agreement.";
+                color = "#e0a030";
+            } else {
+                title = "Not quite yet 💛";
+                message = "We recommend starting with volunteering at a shelter or choosing a small, low-maintenance pet.";
+                color = "#e8856b";
+            }
+
+            // Feature 4: change the colour of the result box (changing style of an element)
+            box.style.borderTop = "8px solid " + color;
+
+            document.getElementById("result-title").textContent = title;
+            document.getElementById("result-score").textContent = "Your readiness score: " + score + " / 15";
+            document.getElementById("result-message").textContent = message;
+            document.getElementById("result-animal").textContent = "Your preferred animal: " + animal + ". Check our Animals page to meet them!";
+
+            // Feature 5: show the popup in the middle of the page
+            overlay.style.display = "flex";
+        });
+
+        // Feature 6: hide the popup when pressing OK
+        document.getElementById("result-ok").addEventListener("click", function () {
+            overlay.style.display = "none";
+        });
+
+        // Feature 7: print the result
+        document.getElementById("result-print").addEventListener("click", function () {
+            window.print();
+        });
+    </script>
 
 </body>
 </html>
