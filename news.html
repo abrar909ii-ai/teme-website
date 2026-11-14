@@ -36,13 +36,38 @@
 <!--  الي هنا -->
     <main>
         <h1>Latest news on recently adopted pets</h1>
-       <div class="card">
+      <div class="card">
   <h3>🐾 How Lucy the Kitten Learned to Walk 🐾</h3>
   <p>When Lucy was adopted as a tiny, weeks-old kitten, she was so weak and small that she couldn't even stand on her own four paws. Her new family gave her a warm bed, endless love, and plenty of patience. Day by day, little Lucy grew stronger. First, she mastered the art of wiggling, then she took her very first shaky steps across the living room rug. Today, Lucy is no longer just crawling—she enthusiastically trots all over the house, leading playful daily parades and exploring every cozy corner she can find!</p>
   <div style="text-align: center; margin-top: 15px;">
-    <img src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?auto=format&fit=crop&w=800&q=80" alt="Cute Orange Kitten" style="max-width: 350px; width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;" />
+    <img id="lucy-img" src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?auto=format&fit=crop&w=800&q=80" alt="Cute Orange Kitten" style="max-width: 350px; width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto; cursor: pointer;" />
   </div>
 </div>
+
+<script>
+  const lucyImg = document.getElementById('lucy-img');
+
+  lucyImg.style.transition = 'transform 0.3s ease';
+
+  lucyImg.addEventListener('mouseenter', () => {
+    lucyImg.style.transform = 'scale(1.05) rotate(2deg)';
+  });
+
+  lucyImg.addEventListener('mouseleave', () => {
+    lucyImg.style.transform = 'scale(1) rotate(0deg)';
+  });
+
+  lucyImg.addEventListener('click', () => {
+    lucyImg.animate([
+      { transform: 'translateY(0) scale(1.05)' },
+      { transform: 'translateY(-15px) scale(1.08)' },
+      { transform: 'translateY(0) scale(1.05)' }
+    ], {
+      duration: 400,
+      easing: 'ease-out'
+    });
+  });
+</script>
         <div class="card">
   <h3> Kiwi’s Musical Awakening🎶</h3>
   <p>When Kiwi was first adopted, he was a painfully shy parrot who spent all his days hiding quietly in the corner of his cage, refusing to utter a single sound. His owner tried everything to cheer him up, playing soft melodies every single morning. Slowly, Kiwi's shyness melted away. Today, the once-silent bird has transformed into the house's superstar, enthusiastically singing along to every tune, dancing to the beat, and filling every room with cheerful melodies!</p>
