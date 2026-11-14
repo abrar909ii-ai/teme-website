@@ -356,6 +356,7 @@ main h1 {
 
 /* الهيرو */
 .home-page .hero { background: #fff7ee; overflow: hidden; }
+
 .home-page .hero-text h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); line-height: 1.1; color: #2a1a14; margin-bottom: 20px; }
 .home-page .hero-text p { font-size: 1.1rem; margin-bottom: 14px; color: #5a4a42; }
 
