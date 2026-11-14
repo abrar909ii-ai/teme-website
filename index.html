@@ -45,14 +45,10 @@
                them a second chance at happiness.</p>
             <p class="smal">🐾 A little love can change a life.</p>
             <a href="animals.html" class="header-btn">Adopt a Pet</a>
-         <div class="color-controls">
-    <button id="changeTextBtn" class="header-btn" type="button">🎨 غيّر ستايل العنوان</button>
-    <button id="changeBgBtn" class="header-btn" type="button">🌈 غيّر الخلفية</button>
-</div>
         </div>
 
         <div class="hero-visual">
-            
+
             <img src="hero.png" alt="A dog and two kittens resting together" class="hero-img">
         </div>
     </div>
@@ -68,7 +64,6 @@
 <section class="features">
     <h2>Why Choose MA'WA?</h2>
     <div class="cards">
-
         <div class="card">
             <img src="ph.jpg" alt="Find Love">
             <h3>Find Love</h3>
@@ -97,29 +92,6 @@
 <footer>
     <p>&copy; 2026 جميع الحقوق محفوظة</p>
 </footer>
-<script>
-    const title = document.querySelector('.hero-text h1');
-    const textBtn = document.getElementById('changeTextBtn');
-    const bgBtn = document.getElementById('changeBgBtn');
-
-    const titleClasses = ['title-style-1', 'title-style-2', 'title-style-3', 'title-style-4'];
-    const bgClasses = ['bg-1', 'bg-2', 'bg-3', 'bg-4'];
-
-    let titleIndex = -1;
-    let bgIndex = -1;
-
-    textBtn.addEventListener('click', function () {
-        title.classList.remove(...titleClasses);
-        titleIndex = (titleIndex + 1) % titleClasses.length;
-        title.classList.add(titleClasses[titleIndex]);
-    });
-
-    bgBtn.addEventListener('click', function () {
-        document.body.classList.remove(...bgClasses);
-        bgIndex = (bgIndex + 1) % bgClasses.length;
-        document.body.classList.add(bgClasses[bgIndex]);
-    });
-</script>
 
 </body>
 </html>
