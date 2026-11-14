@@ -352,44 +352,35 @@ main h1 {
     color: #3b2a20;
 }
 /*ذا خاص في هوم */
-.hero {
-    background-image: url("A-imag4.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* ===== صفحة Home فقط (بدون الشريط العلوي) ===== */
 
-   width: 100%;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;   
-    padding: 40px 6%;
-}
+/* الهيرو */
+.home-page .hero { background: #fff7ef; overflow: hidden; }
+.home-page .hero-inner { max-width: 1300px; margin: 0 auto; padding: 60px 28px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; }
+.home-page .hero-text h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); line-height: 1.1; color: #2a1a14; margin-bottom: 20px; }
+.home-page .hero-text p { font-size: 1.1rem; margin-bottom: 14px; color: #5a4a42; }
+.home-page .hero-visual { position: relative; display: flex; justify-content: center; }
+.home-page .hero-visual::before { content: ""; position: absolute; inset: 5% -5% 0 10%; background: #e8896b; border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+.home-page .hero-img { position: relative; width: 100%; max-width: 560px; height: auto; }
 
-.hero-text {
-    max-width: 560px;
-    text-align: left;           
-}
+/* Welcome + Features */
+.home-page .welcome, .home-page .features { text-align: center; padding: 50px 24px; }
+.home-page .welcome h2, .home-page .features h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); color: #2a1a14; margin-bottom: 16px; }
+.home-page .cards { max-width: 1000px; margin: 30px auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.home-page .card { background: #fffaf4; border-radius: 24px; padding: 30px 20px; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+.home-page .card img { width: 90px; height: 90px; object-fit: contain; margin: 0 auto 16px; }
 
-.hero-text h1 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: clamp(2.4rem, 7vw, 5rem);
-    line-height: 1.1;
-    color: #2B1B14;
-    margin-bottom: 16px;
-    direction: ltr;
-    text-align: left;  
-    
+/* CTA */
+.home-page .cta { text-align: center; padding: 60px 24px; background: #e8896b; color: #fff; }
+.home-page .cta a { display: inline-block; margin-top: 20px; background: #fff; color: #d6735a; padding: 12px 30px; border-radius: 999px; font-weight: bold; text-decoration: none; }
+
+/* الجوال والتابلت */
+@media (max-width: 800px) {
+  .home-page .hero-inner { grid-template-columns: 1fr; text-align: center; padding: 40px 20px; }
+  .home-page .hero-img { max-width: 340px; }
+  .home-page .card img { width: 76px; height: 76px; }
 }
-.smal{
-   color:#B77965;
-    font-family: "Poppins";
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 1.1;
-    text-align: left; 
-}
+/*االى هنا*/
 .welcome, .features, .cta {
     padding: 60px 8%;
     text-align: center;
@@ -402,6 +393,7 @@ main h1 {
 
 h2 { color: #432D29; font-size: 32px; }
 p { color: #65534D; line-height: 1.8; }
+
 
 /* 1. تنسيق العنوان الرئيسي في المنتصف */
 .animals-title {
@@ -508,7 +500,7 @@ p { color: #65534D; line-height: 1.8; }
     .cards { grid-template-columns: 1fr; }
     h2 { font-size: 26px; }
 }
-/*االى هنا*/
+
 
 /* ===== Quiz page (all rules scoped to .quiz-page) ===== */
 
