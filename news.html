@@ -34,66 +34,7 @@
     </div>
 </header>
 <!--  الي هنا -->
-    <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark Mode</button>
-
-<style>
-    body {
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .dark-mode-btn {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        padding: 10px 16px;
-        background-color: #333;
-        color: #fff;
-        border: none;
-        border-radius: 20px;
-        cursor: pointer;
-        font-size: 14px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        transition: background-color 0.3s ease, transform 0.2s ease;
-        z-index: 1000;
-    }
-
-    .dark-mode-btn:hover {
-        transform: scale(1.05);
-    }
-
-    body.dark-mode {
-        background-color: #121212;
-        color: #e0e0e0;
-    }
-
-    body.dark-mode .card {
-        background-color: #1e1e1e;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-
-    body.dark-mode .dark-mode-btn {
-        background-color: #f0f0f0;
-        color: #121212;
-    }
-
-    body.dark-mode a {
-        color: #8ab4f8 !important;
-    }
-</style>
-
-<script>
-    const darkModeBtn = document.getElementById('darkModeToggle');
-
-    darkModeBtn.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        
-        if (document.body.classList.contains('dark-mode')) {
-            darkModeBtn.textContent = '☀️ Light Mode';
-        } else {
-            darkModeBtn.textContent = '🌙 Dark Mode';
-        }
-    });
-</script>
+   
     <main>
         <h1>Latest news on recently adopted pets</h1>
       <div class="card">
@@ -145,6 +86,22 @@
   </div>
 </div>
     </main>
+    
+    <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark Mode</button>
+
+<script>
+    const darkModeBtn = document.getElementById('darkModeToggle');
+
+    darkModeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        
+        if (document.body.classList.contains('dark-mode')) {
+            darkModeBtn.textContent = '☀️ Light Mode';
+        } else {
+            darkModeBtn.textContent = '🌙 Dark Mode';
+        }
+    });
+</script>
 
     <footer>
         <p>&copy; 2026 جميع الحقوق محفوظة</p>
