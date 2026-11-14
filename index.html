@@ -93,5 +93,35 @@
     <p>&copy; 2026 جميع الحقوق محفوظة</p>
 </footer>
 
+    <script>
+    // العناصر
+    const title = document.querySelector('.hero-text h1');
+    const textBtn = document.getElementById('changeTextBtn');
+    const bgBtn = document.getElementById('changeBgBtn');
+
+    // ألوان العنوان
+    const textColors = ['#e67e22', '#e74c3c', '#8e44ad', '#16a085', '#2c3e50'];
+    // ألوان الخلفية
+    const bgColors = ['#fff8f0', '#eaf6ff', '#f3ffe9', '#fdeef4', '#f5f0ff'];
+
+    let textIndex = 0;
+    let bgIndex = 0;
+
+    // تغيير لون وستايل العنوان
+    textBtn.addEventListener('click', function () {
+        textIndex = (textIndex + 1) % textColors.length;
+        title.style.color = textColors[textIndex];
+        title.style.fontStyle = textIndex % 2 === 0 ? 'normal' : 'italic';
+        title.style.textShadow = '2px 2px 6px rgba(0,0,0,0.2)';
+        title.style.transition = 'all 0.4s ease';
+    });
+
+    // تغيير لون الخلفية
+    bgBtn.addEventListener('click', function () {
+        bgIndex = (bgIndex + 1) % bgColors.length;
+        document.body.style.backgroundColor = bgColors[bgIndex];
+        document.body.style.transition = 'background-color 0.5s ease';
+    });
+</script>
 </body>
 </html>
