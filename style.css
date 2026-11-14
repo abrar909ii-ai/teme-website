@@ -350,6 +350,24 @@ main h1 {
     text-align: center;
     padding: 16px;
     color: #3b2a20;
+
+    .contact-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.contact-page th,
+.contact-page td {
+    border: 1px solid #e0a96d;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.contact-page th {
+    background-color: #fdf0dc;
+    width: 30%;
+}
 }
 /*ذا خاص في هوم----------------------------------------------------------------------- */
 
